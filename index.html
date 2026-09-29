@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="bn" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ফোকাস মাস্টার — মনোযোগ ধরে রাখার ৮টি অভ্যাস</title>
+<meta name="description" content="এক সময়ে একটাই কাজ — Deep Work ও মনোযোগ বাড়ানোর ৮টি ব্যবহারিক অভ্যাস।">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="#home">
+      <span class="brand-mark">🎯</span>
+      <span>ফোকাস মাস্টার</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">হোম</a>
+      <a href="#one-task">এক কাজ</a>
+      <a href="#focus-session">টাইমার</a>
+      <a href="#distraction-list">Distraction List</a>
+      <a href="#sleep-breaks">ঘুম</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" title="থিম পরিবর্তন">🌙</button>
+      <button class="icon-btn menu-btn" id="menuBtn" title="মেনু">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="app">
+
+  <!-- ================= HOME ================= -->
+  <section class="page" data-page="home">
+    <div class="hero">
+      <div class="container">
+        <div class="hero-badge reveal">🧠 এক সময়ে একটাই কাজ</div>
+        <h1 class="reveal">মনোযোগ হারানোর যুগে <span class="grad">Deep Work</span> গড়ে তোলার ৮টি অভ্যাস</h1>
+        <p class="lead reveal">
+          একসাথে Coding + YouTube + Facebook করলে মন বারবার switch হয়। প্রতিটি switch-এ
+          শক্তি ও সময় দুটোই নষ্ট হয়। নিচের ৮টি অভ্যাস ধাপে ধাপে অনুসরণ করুন —
+          <b>একটি কাজ শেষ করে পরেরটিতে যান।</b>
+        </p>
+        <div class="hero-cta reveal">
+          <a class="btn btn-primary" href="#one-task">অভ্যাসগুলো শুরু করুন →</a>
+          <a class="btn btn-ghost" href="#focus-session">⏱️ ফোকাস টাইমার</a>
+        </div>
+        <div class="stat-row reveal">
+          <div class="stat"><b>২৩</b><span>মিনিট — distraction-এর পর মনোযোগ ফিরে পেতে গড়ে সময় লাগে</span></div>
+          <div class="stat"><b>২৫/৫</b><span>Pomodoro — ফোকাস + বিরতির সহজ ছন্দ</span></div>
+          <div class="stat"><b>৮</b><span>অভ্যাস — ছোট পরিবর্তনে বড় ফল</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container section">
+      <h2 class="section-title reveal">৮টি অভ্যাস</h2>
+      <p class="section-sub reveal">প্রতিটির জন্য আলাদা পেজ — নিয়ম, চেকলিস্ট ও ইন্টারঅ্যাকটিভ টুলসহ।</p>
+      <div class="habit-grid">
+        <a class="habit-card reveal" href="#one-task"><div class="habit-num">অভ্যাস ০১</div><div class="habit-icon">🎯</div><h3>এক সময়ে একটাই কাজ</h3><p>Multitasking brain-এর জন্য ক্ষতিকর। একসাথে অনেক কাজ করলে কোনোটাই ঠিকভাবে হয় না।</p><span class="go">বিস্তারিত →</span></a>
+        <a class="habit-card reveal" href="#focus-session"><div class="habit-num">অভ্যাস ০২</div><div class="habit-icon">⏱️</div><h3>২৫–৩০ মিনিটের Focus Session</h3><p>২৫ মিনিট শুধু কাজ → ৫ মিনিট বিরতি। কয়েকটি সেশনের পর বড় বিরতি।</p><span class="go">টাইমার চালান →</span></a>
+        <a class="habit-card reveal" href="#phone-away"><div class="habit-num">অভ্যাস ০৩</div><div class="habit-icon">📱</div><h3>ফোনকে চোখের আড়ালে রাখুন</h3><p>Silent করাই যথেষ্ট নয় — ফোন অন্য জায়গায় রাখলে দেখার প্রবণতা কমে।</p><span class="go">নিয়ম দেখুন →</span></a>
+        <a class="habit-card reveal" href="#small-goals"><div class="habit-num">অভ্যাস ০৪</div><div class="habit-icon">📝</div><h3>কাজ শুরুর আগে ছোট লক্ষ্য লিখুন</h3><p>“আজ Programming শিখব” নয় — “JavaScript-এর array methods শেষ করব, ৩টি problem solve করব।”</p><span class="go">লক্ষ্য লিখুন →</span></a>
+        <a class="habit-card reveal" href="#notifications-off"><div class="habit-num">অভ্যাস ০৫</div><div class="habit-icon">🔕</div><h3>Notification বন্ধ করুন</h3><p>Facebook, Messenger, YouTube, Instagram-এর notification attention ভেঙে দেয়।</p><span class="go">চেকলিস্ট →</span></a>
+        <a class="habit-card reveal" href="#distraction-list"><div class="habit-num">অভ্যাস ০৬</div><div class="habit-icon">🗒️</div><h3>Distraction List রাখুন</h3><p>কাজের সময় অন্য চিন্তা এলে সঙ্গে সঙ্গে করতে যাবেন না — নোটে লিখে রাখুন।</p><span class="go">লিস্ট খুলুন →</span></a>
+        <a class="habit-card reveal" href="#sleep-breaks"><div class="habit-num">অভ্যাস ০৭</div><div class="habit-icon">😴</div><h3>ঘুম ও বিরতিকে গুরুত্ব দিন</h3><p>পর্যাপ্ত ঘুম ও নিয়মিত ছোট বিরতি দীর্ঘ সময় মনোযোগ ধরে রাখে।</p><span class="go">ঘুম ক্যালকুলেটর →</span></a>
+        <a class="habit-card reveal" href="#deep-work-time"><div class="habit-num">অভ্যাস ০৮</div><div class="habit-icon">🕗</div><h3>প্রতিদিন একই সময়ে Deep Work</h3><p>যেমন প্রতিদিন সকাল ৮টা–১০টা শুধু CS/Programming। কয়েক সপ্তাহে অভ্যাস হয়।</p><span class="go">সময় নির্ধারণ →</span></a>
+      </div>
+
+      <div class="card reveal" style="margin-top:36px">
+        <h2><span class="em">🚀</span> কীভাবে ব্যবহার করবেন</h2>
+        <ol class="steps">
+          <li><span class="step-num">১</span><span>একটি অভ্যাস বেছে নিন এবং তার পেজ খুলুন।</span></li>
+          <li><span class="step-num">২</span><span>চেকলিস্ট ও টুল ব্যবহার করে আজই চর্চা শুরু করুন।</span></li>
+          <li><span class="step-num">৩</span><span>একটি অভ্যাস অন্তত ৭ দিন ধরে রাখুন, তারপর পরেরটিতে যান।</span></li>
+          <li><span class="step-num">৪</span><span>প্রতিটি পেজের নিচে “পরের অভ্যাস” বাটন — সেটি পরেরটিতে নিয়ে যাবে।</span></li>
+        </ol>
+        <div class="callout"><span>💡</span><span>সব একসাথে শুরু করবেন না। একটাই বদলান, সেটা অভ্যাসে পরিণত হলে পরেরটা।</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 01 ONE TASK ================= -->
+  <section class="page" data-page="one-task">
+    <div class="container page-wrap">
+      <div class="crumb"><a href="#home">হোম</a> / <span>অভ্যাস ০১</span></div>
+      <div class="page-head">
+        <div class="habit-icon big">🎯</div>
+        <div>
+          <div class="habit-num">অভ্যাস ০১</div>
+          <h1>এক সময়ে একটাই কাজ করুন</h1>
+          <p class="lead">একসাথে Coding + YouTube + Facebook করলে মন বারবার switch হয়। একটি কাজ শেষ করে পরেরটিতে যান।</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h2>কেন গুরুত্বপূর্ণ</h2>
+          <p>আমাদের brain আসলে multitasking করতে পারে না — সে দ্রুত এক কাজ থেকে আরেক কাজে switch করে। প্রতিটি switch-এ <b>attention residue</b> থেকে যায়, ফলে নতুন কাজে পুরোপুরি মন বসতে সময় লাগে। গবেষণায় দেখা গেছে, একটি distraction-এর পর গভীর মনোযোগে ফিরতে গড়ে প্রায় <b>২৩ মিনিট</b> লাগে।</p>
+          <div class="callout"><span>⚠️</span><span>তাই ৫ বার notification দেখলে ১ ঘণ্টার কাজ ৩ ঘণ্টায় গড়ায়।</span></div>
+        </div>
+        <div class="card">
+          <h2>আজকের চেকলিস্ট</h2>
+          <div class="checks">
+            <label class="check"><input type="checkbox" data-key="onetask-1"><span>একটি নির্দিষ্ট কাজ বেছে নিয়েছি</span></label>
+            <label class="check"><input type="checkbox" data-key="onetask-2"><span>বাকি সব ট্যাব/অ্যাপ বন্ধ করেছি</span></label>
+            <label class="check"><input type="checkbox" data-key="onetask-3"><span>কাজ শেষ না হওয়া পর্যন্ত switch করিনি</span></label>
+            <label class="check"><input type="checkbox" data-key="onetask-4"><span>শেষে ২ মিনিট রিভিউ করেছি</span></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>বাস্তবে যেভাবে করবেন</h2>
+        <ol class="steps">
+          <li><span class="step-num">১</span><span>একটি কাজ লিখুন একটি কাগজে বা নোটে — যেমন “Login page-এর CSS ঠিক করা”।</span></li>
+          <li><span class="step-num">২</span><span>কাজ শেষ হওয়ার আগে অন্য কিছু খুলবেন না — এমনকি “শুধু একবার দেখব” বলেও না।</span></li>
+          <li><span class="step-num">৩</span><span>মাঝে কিছু মনে পড়লে সেটি Distraction List-এ লিখে রাখুন (অভ্যাস ০৬)।</span></li>
+          <li><span class="step-num">৪</span><span>কাজ শেষ হলে ২ মিনিট নিজেকে জিজ্ঞেস করুন — “আমি কি সত্যিই একটি কাজেই ছিলাম?”</span></li>
+        </ol>
+      </div>
+
+      <div class="pager">
+        <a class="btn btn-ghost" href="#home">← হোম</a>
+        <a class="btn btn-primary" href="#focus-session">পরের অভ্যাস: Focus Session →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 02 FOCUS SESSION ================= -->
+  <section class="page" data-page="focus-session">
+    <div class="container page-wrap">
+      <div class="crumb"><a href="#home">হোম</a> / <span>অভ্যাস ০২</span></div>
+      <div class="page-head">
+        <div class="habit-icon big">⏱️</div>
+        <div>
+          <div class="habit-num">অভ্যাস ০২</div>
+          <h1>২৫–৩০ মিনিটের Focus Session</h1>
+          <p class="lead">২৫ মিনিট শুধু কাজ → ৫ মিনিট বিরতি। কয়েকটি সেশনের পর একটু বড় বিরতি নিন।</p>
+        </div>
+      </div>
+
+      <div class="card timer-card">
+        <div class="timer-modes">
+          <button class="chip active" data-preset="25,5">২৫ / ৫</button>
+          <button class="chip" data-preset="30,5">৩০ / ৫</button>
+          <button class="chip" data-preset="50,10">৫০ / ১০</button>
+        </div>
+
+        <div class="timer-ring-wrap">
+          <svg class="timer-ring" viewBox="0 0 200 200">
+            <circle class="ring-bg" cx="100" cy="100" r="90"></circle>
+            <circle class="ring-fg" id="ringFg" cx="100" cy="100" r="90"></circle>
+          </svg>
+          <div class="timer-center">
+            <div class="timer-mode" id="timerMode">FOCUS</div>
+            <div class="timer-time" id="timerTime">25:00</div>
+            <div class="timer-round" id="timerRound">রাউন্ড ১ / ৪</div>
+          </div>
+        </div>
+
+        <div class="timer-controls">
+          <button class="btn btn-primary" id="btnStart">শুরু</button>
+          <button class="btn btn-ghost" id="btnReset">রিসেট</button>
+          <button class="btn btn-ghost" id="btnSkip">স্কিপ</button>
+        </div>
+        <p class="muted center" style="margin-top:10px">৪টি ফোকাস সেশন শেষে ১৫ মিনিটের বড় বিরতি নিন।</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h2>নিয়ম</h2>
+          <ul class="list">
+            <li>টাইমার চলাকালীন <b>শুধু নির্বাচিত কাজ</b> করবেন।</li>
+            <li>বিরতির ৫ মিনিটে ফোন/সোশ্যাল মিডিয়া নয় — পানি খান, হাঁটুন, চোখ বন্ধ রাখুন।</li>
+            <li>সেশন মাঝপথে ছাড়বেন না — প্রয়োজনে ছোট লক্ষ্য নিন।</li>
+            <li>দিনে শুরুতে ৪–৬টি সেশনই যথেষ্ট, বেশি নয়।</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>আজকের চেকলিস্ট</h2>
+          <div class="checks">
+            <label class="check"><input type="checkbox" data-key="focus-1"><span>কমপক্ষে ২টি ফোকাস সেশন করেছি</span></label>
+            <label class="check"><input type="checkbox" data-key="focus-2"><span>বিরতিতে ফোন ব্যবহার করিনি</span></label>
+            <label class="check"><input type="checkbox" data-key="focus-3"><span>বড় বিরতি নিয়েছি</span></label>
+            <label class="check"><input type="checkbox" data-key="focus-4"><span>সেশনের হিসাব নোট করেছি</span></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="pager">
+        <a class="btn btn-ghost" href="#one-task">← আগের অভ্যাস</a>
+        <a class="btn btn-primary" href="#phone-away">পরের অভ্যাস: ফোন দূরে →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 03 PHONE AWAY ================= -->
+  <section class="page" data-page="phone-away">
+    <div class="container page-wrap">
+      <div class="crumb"><a href="#home">হোম</a> / <span>অভ্যাস ০৩</span></div>
+      <div class="page-head">
+        <div class="habit-icon big">📱</div>
+        <div>
+          <div class="habit-num">অভ্যাস ০৩</div>
+          <h1>ফোনকে চোখের আড়ালে রাখুন</h1>
+          <p class="lead">Silent করাই যথেষ্ট নয়। পড়াশোনা/Coding-এর সময় ফোন অন্য জায়গায় রাখলে বারবার দেখার প্রবণতা কমে।</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h2>কেন কাজ করে</h2>
+          <p>ফোন টেবিলে থাকলেও brain-এর একটি অংশ সেটির দিকেই নজর রাখে — একে বলা হয় <b>“brain drain”</b>। ফলে কাজের গতি কমে যায়, এমনকি ফোন ধরার আগেই। ফোন অন্য রুমে রাখলে মস্তিষ্ক সেটি “out of sight, out of mind” হিসেবে ধরে নেয়।</p>
+          <div class="callout"><span>💡</span><span>পড়ার টেবিল থেকে ৩ মিটার দূরে ফোন রাখুন — এটাই সবচেয়ে সহজ সমাধান।</span></div>
+        </div>
+        <div class="card">
+          <h2>আজকের চেকলিস্ট</h2>
+          <div class="checks">
+            <label class="check"><input type="checkbox" data-key="phone-1"><span>ফোন অন্য রুমে / ব্যাগে রেখেছি</span></label>
+            <label class="check"><input type="checkbox" data-key="phone-2"><span>Silent বা Airplane mode চালু</span></label>
+            <label class="check"><input type="checkbox" data-key="phone-3"><span>ল্যাপটপে ফোনের notification বন্ধ</span></label>
+            <label class="check"><input type="checkbox" data-key="phone-4"><span>কাজ শেষে নির্দিষ্ট সময়ে ফোন দেখেছি</span></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>বিকল্প যেভাবে করতে পারেন</h2>
+        <ol class="steps">
+          <li><span class="step-num">১</span><span><b>Physical distance:</b> ফোন অন্য ঘরে বা ড্রয়ারে।</span></li>
+          <li><span class="step-num">২</span><span><b>App blocker:</b> Focus mode / Digital Wellbeing ব্যবহার করুন।</span></li>
+          <li><span class="step-num">৩</span><span><b>Grayscale mode:</b> ফোন কালো-সাদা করলে আকর্ষণ কমে।</span></li>
+          <li><span class="step-num">৪</span><span><b>Replace:</b> ফোনের জায়গায় পানির বোতল ও নোটবুক রাখুন।</span></li>
+        </ol>
+      </div>
+
+      <div class="pager">
+        <a class="btn btn-ghost" href="#focus-session">← আগের অভ্যাস</a>
+        <a class="btn btn-primary" href="#small-goals">পরের অভ্যাস: ছোট লক্ষ্য →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 04 SMALL GOALS ================= -->
+  <section class="page" data-page="small-goals">
+    <div class="container page-wrap">
+      <div class="crumb"><a href="#home">হোম</a> / <span>অভ্যাস ০৪</span></div>
+      <div class="page-head">
+        <div class="habit-icon big">📝</div>
+        <div>
+          <div class="habit-num">অভ্যাস ০৪</div>
+          <h1>কাজ শুরুর আগে ছোট লক্ষ্য লিখুন</h1>
+          <p class="lead">অস্পষ্ট লক্ষ্য = অস্পষ্ট মনোযোগ। ছোট, নির্দিষ্ট ও পরিমাপযোগ্য লক্ষ্য লিখুন।</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h2>❌ ভুল বনাম ✅ সঠিক</h2>
+          <div class="compare">
+            <div class="bad"><b>❌</b> “আজ Programming শিখব”</div>
+            <div class="good"><b>✅</b> “আজ JavaScript-এর <code>array methods</code> শেষ করব এবং ৩টি problem solve করব।”</div>
+            <div class="bad"><b>❌</b> “আজ পড়ব”</div>
+            <div class="good"><b>✅</b> “Physics Chapter 4-এর ২টি math solve করব, ১টি করে দ্রুত রিভিউ করব।”</div>
+            <div class="bad"><b>❌</b> “ওয়েবসাইট বানাব”</div>
+            <div class="good"><b>✅</b> “Homepage-এর navbar ও hero section শেষ করব।”</div>
+          </div>
+        </div>
+        <div class="card">
+          <h2>আজকের লক্ষ্য লিখুন</h2>
+          <textarea id="goalInput" class="input" rows="4" placeholder="আজ আমি এই কাজটি শেষ করব: ..."></textarea>
+          <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap">
+            <button class="btn btn-primary" id="goalSave">সংরক্ষণ করুন</button>
+            <button class="btn btn-ghost" id="goalClear">মুছুন</button>
+          </div>
+          <div id="goalSaved" class="callout" style="display:none"><span>✅</span><span id="goalSavedText"></span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>ভালো লক্ষ্যের ৩টি বৈশিষ্ট্য</h2>
+        <ol class="steps">
+          <li><span class="step-num">১</span><span><b>নির্দিষ্ট:</b> কোন অংশ, কতটুকু — স্পষ্ট থাকবে।</span></li>
+          <li><span class="step-num">২</span><span><b>পরিমাপযোগ্য:</b> সংখ্যা দিয়ে বলা যাবে (২টি, ৩টি, ১ পাতা)।</span></li>
+          <li><span class="step-num">৩</span><span><b>এক সেশনে শেষযোগ্য:</b> ২৫ মিনিটে যেটা হয়ে যায়, সেটাই নির্বাচন করুন।</span></li>
+        </ol>
+      </div>
+
+      <div class="pager">
+        <a class="btn btn-ghost" href="#phone-away">← আগের অভ্যাস</a>
+        <a class="btn btn-primary" href="#notifications-off">পরের অভ্যাস: Notification বন্ধ →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 05 NOTIFICATIONS OFF ================= -->
+  <section class="page" data-page="notifications-off">
+    <div class="container page-wrap">
+      <div class="crumb"><a href="#home">হোম</a> / <span>অভ্যাস ০৫</span></div>
+      <div class="page-head">
+        <div class="habit-icon big">🔕</div>
+        <div>
+          <div class="habit-num">অভ্যাস ০৫</div>
+          <h1>Notification বন্ধ করুন</h1>
+          <p class="lead">Facebook, Messenger, YouTube, Instagram ইত্যাদির notification কাজের মাঝখানে attention ভেঙে দেয়।</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h2>কেন এত ক্ষতিকর</h2>
+          <p>প্রতিটি notification brain-এ dopamine-এর ছোট ছোট burst তৈরি করে। ফলে আপনি ধীরে ধীরে notification-এর অপেক্ষায় থাকতে অভ্যস্ত হয়ে যান, আর একটানা কাজে সময় দিতে পারেন না। সবচেয়ে বড় সমস্যা: একটি notification দেখার পর মনোযোগ ফিরে পেতে গড়ে ২৩ মিনিট লাগে।</p>
+        </div>
+        <div class="card">
+          <h2>আজকের চেকলিস্ট</h2>
+          <div class="checks">
+            <label class="check"><input type="checkbox" data-key="notif-1"><span>Facebook notification বন্ধ</span></label>
+            <label class="check"><input type="checkbox" data-key="notif-2"><span>Messenger notification বন্ধ</span></label>
+            <label class="check"><input type="checkbox" data-key="notif-3"><span>YouTube notification বন্ধ</span></label>
+            <label class="check"><input type="checkbox" data-key="notif-4"><span>Instagram notification বন্ধ</span></label>
+            <label class="check"><input type="checkbox" data-key="notif-5"><span>ল্যাপটপের desktop notification বন্ধ</span></label>
+            <label class="check"><input type="checkbox" data-key="notif-6"><span>কাজ শেষে একবারই সোশ্যাল মিডিয়া দেখব</span></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>ধাপে ধাপে বন্ধ করার নিয়ম</h2>
+        <ol class="steps">
+          <li><span class="step-num">১</span><span>প্রতিটি অ্যাপের Settings → Notifications → সব বন্ধ করুন (বিশেষত “badge” ও “sound”)।</span></li>
+          <li><span class="step-num">২</span><span>ল্যাপটপে Do Not Disturb / Focus Assist চালু রাখুন।</span></li>
+          <li><span class="step-num">৩</span><span>কাজের সময় ব্রাউজারের সব সোশ্যাল ট্যাব বন্ধ রাখুন।</span></li>
+          <li><span class="step-num">৪</span><span>দিনে ২ বার (দুপুর ও রাতে) নির্দিষ্ট সময়ে সোশ্যাল মিডিয়া দেখুন।</span></li>
+        </ol>
+      </div>
+
+      <div class="pager">
+        <a class="btn btn-ghost" href="#small-goals">← আগের অভ্যাস</a>
+        <a class="btn btn-primary" href="#distraction-list">পরের অভ্যাস: Distraction List →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 06 DISTRACTION LIST ================= -->
+  <section class="page" data-page="distraction-list">
+    <div class="container page-wrap">
+      <div class="crumb"><a href="#home">হোম</a> / <span>অভ্যাস ০৬</span></div>
+      <div class="page-head">
+        <div class="habit-icon big">🗒️</div>
+        <div>
+          <div class="habit-num">অভ্যাস ০৬</div>
+          <h1>Distraction List রাখুন</h1>
+          <p class="lead">কাজের সময় অন্য কোনো চিন্তা এলে সঙ্গে সঙ্গে সেটা করতে যাবেন না। একটি নোটে লিখে রাখুন — পরে দেখবেন।</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h2>কেন কাজ করে</h2>
+          <p>মনোযোগ ভাঙার আসল কারণ কাজ নয় — <b>চিন্তাটি</b>। মস্তিষ্ক বারবার সেই চিন্তায় ফিরে আসে যতক্ষণ না সেটি কোথাও লিখে রাখা হয়। লিখে ফেললে brain সেটি “handle হয়ে গেছে” বলে ধরে নেয় এবং কাজে ফিরে যেতে পারে।</p>
+          <div class="callout"><span>💡</span><span>নিয়ম: লিখুন → ফিরে যান → কাজ শেষে দেখুন।</span></div>
+        </div>
+        <div class="card">
+          <h2>আজকের Distraction List</h2>
+          <div class="list-add">
+            <input type="text" id="distInput" class="input" placeholder="যেমন: ওয়েবসাইটের রঙ বদলাতে হবে...">
+            <button class="btn btn-primary" id="distAdd">যোগ করুন</button>
+          </div>
+          <ul id="distList" class="dist-list"></ul>
+          <div class="list-actions">
+            <button class="btn btn-ghost" id="distClear">সব মুছুন</button>
+            <span class="muted" id="distCount">০টি</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>ব্যবহারের নিয়ম</h2>
+        <ol class="steps">
+          <li><span class="step-num">১</span><span>কাজের টেবিলে একটি কাগজ বা এই পেজ খোলা রাখুন।</span></li>
+          <li><span class="step-num">২</span><span>মনোযোগ ভাঙার মুহূর্তে চিন্তাটি <b>৫ সেকেন্ডে</b> লিখে ফেলুন।</span></li>
+          <li><span class="step-num">৩</span><span>সাথে সাথে কাজে ফিরে যান — চিন্তাটি নিয়ে ভাববেন না।</span></li>
+          <li><span class="step-num">৪</span><span>বিরতির সময় বা দিনের শেষে লিস্টটি দেখুন ও প্রয়োজনে কাজ করুন।</span></li>
+        </ol>
+      </div>
+
+      <div class="pager">
+        <a class="btn btn-ghost" href="#notifications-off">← আগের অভ্যাস</a>
+        <a class="btn btn-primary" href="#sleep-breaks">পরের অভ্যাস: ঘুম ও বিরতি →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 07 SLEEP & BREAKS ================= -->
+  <section class="page" data-page="sleep-breaks">
+    <div class="container page-wrap">
+      <div class="crumb"><a href="#home">হোম</a> / <span>অভ্যাস ০৭</span></div>
+      <div class="page-head">
+        <div class="habit-icon big">😴</div>
+        <div>
+          <div class="habit-num">অভ্যাস ০৭</div>
+          <h1>ঘুম ও বিরতিকে গুরুত্ব দিন</h1>
+          <p class="lead">পর্যাপ্ত ঘুম এবং নিয়মিত ছোট বিরতি দীর্ঘ সময় মনোযোগ ধরে রাখতে সাহায্য করে।</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h2>💤 ঘুম ক্যালকুলেটর</h2>
+          <p class="muted">কয়টায় ঘুম থেকে উঠবেন লিখুন — কয়টায় ঘুমাতে হবে তা দেখাবে (ঘুমাতে ১৫ মিনিট লাগে ধরে)।</p>
+          <label class="field-label">উঠার সময়</label>
+          <input type="time" id="wakeTime" class="input" value="06:00">
+          <div id="sleepResults" class="sleep-results"></div>
+          <div class="callout" style="margin-top:14px"><span>🛏️</span><span>৭–৯ ঘণ্টা ঘুমই প্রাপ্তবয়স্কদের জন্য আদর্শ।</span></div>
+        </div>
+        <div class="card">
+          <h2>আজকের চেকলিস্ট</h2>
+          <div class="checks">
+            <label class="check"><input type="checkbox" data-key="sleep-1"><span>৭+ ঘণ্টা ঘুমিয়েছি</span></label>
+            <label class="check"><input type="checkbox" data-key="sleep-2"><span>প্রতি ২৫ মিনিটে ৫ মিনিট বিরতি নিয়েছি</span></label>
+            <label class="check"><input type="checkbox" data-key="sleep-3"><span>বিরতিতে স্ক্রিন দেখিনি</span></label>
+            <label class="check"><input type="checkbox" data-key="sleep-4"><span>সন্ধ্যার পর ক্যাফেইন খাইনি</span></label>
+            <label class="check"><input type="checkbox" data-key="sleep-5"><span>একই সময়ে ঘুমাতে গিয়েছি</span></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>বিরতির সঠিক নিয়ম</h2>
+        <ol class="steps">
+          <li><span class="step-num">১</span><span><b>৫ মিনিট:</b> উঠে হাঁটুন, পানি খান, জানালা দিয়ে তাকান।</span></li>
+          <li><span class="step-num">২</span><span><b>১৫ মিনিট:</b> ৪ সেশন পর — হালকা স্ন্যাক্স, চোখ বন্ধ, ছোট হাঁটা।</span></li>
+          <li><span class="step-num">৩</span><span><b>নিষিদ্ধ:</b> বিরতিতে ফোন, সোশ্যাল মিডিয়া, YouTube — এগুলো বিরতি নয়, বরং আরেক ধরনের কাজ।</span></li>
+          <li><span class="step-num">৪</span><span><b>ঘুম:</b> প্রতিদিন একই সময়ে ঘুমাতে যান ও উঠুন।</span></li>
+        </ol>
+      </div>
+
+      <div class="pager">
+        <a class="btn btn-ghost" href="#distraction-list">← আগের অভ্যাস</a>
+        <a class="btn btn-primary" href="#deep-work-time">পরের অভ্যাস: Deep Work সময় →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 08 DEEP WORK TIME ================= -->
+  <section class="page" data-page="deep-work-time">
+    <div class="container page-wrap">
+      <div class="crumb"><a href="#home">হোম</a> / <span>অভ্যাস ০৮</span></div>
+      <div class="page-head">
+        <div class="habit-icon big">🕗</div>
+        <div>
+          <div class="habit-num">অভ্যাস ০৮</div>
+          <h1>প্রতিদিন একই সময়ে Deep Work</h1>
+          <p class="lead">যেমন প্রতিদিন সকাল ৮টা–১০টা শুধু CS/Programming। কয়েক সপ্তাহ নিয়মিত করলে ওই সময়ে কাজে বসা সহজ হয়ে যায়।</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h2>🕗 আপনার Deep Work সময়</h2>
+          <p class="muted">যে সময়টিতে প্রতিদিন একটানা কাজ করবেন সেটি নির্ধারণ করুন।</p>
+          <div class="two-inputs">
+            <div>
+              <label class="field-label">শুরু</label>
+              <input type="time" id="dwStart" class="input" value="08:00">
+            </div>
+            <div>
+              <label class="field-label">শেষ</label>
+              <input type="time" id="dwEnd" class="input" value="10:00">
+            </div>
+          </div>
+          <div style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap">
+            <button class="btn btn-primary" id="dwSave">সংরক্ষণ</button>
+            <button class="btn btn-ghost" id="dwClear">মুছুন</button>
+          </div>
+          <div id="dwResult" class="callout" style="display:none"><span>✅</span><span id="dwResultText"></span></div>
+        </div>
+        <div class="card">
+          <h2>আজকের চেকলিস্ট</h2>
+          <div class="checks">
+            <label class="check"><input type="checkbox" data-key="deep-1"><span>নির্ধারিত সময়ে বসেছি</span></label>
+            <label class="check"><input type="checkbox" data-key="deep-2"><span>পুরো সময় একটানা কাজ করেছি</span></label>
+            <label class="check"><input type="checkbox" data-key="deep-3"><span>শেষে কী করলাম তা নোট করেছি</span></label>
+            <label class="check"><input type="checkbox" data-key="deep-4"><span>আগামীকালের জন্য ছোট লক্ষ্য লিখেছি</span></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>কেন এই অভ্যাস এত শক্তিশালী</h2>
+        <p>মানুষের brain অভ্যাস ও রুটিন পছন্দ করে। প্রতিদিন একই সময়ে একই ধরনের কাজ করলে brain সেই সময়ে স্বয়ংক্রিয়ভাবে প্রস্তুত হয়ে যায়। কয়েক সপ্তাহ পর আপনি দেখবেন — ঘড়ির কাঁটা ওই সময়ে পৌঁছালেই নিজে থেকেই কাজে বসতে ইচ্ছে করছে।</p>
+        <div class="callout"><span>🎯</span><span>দিনে ২ ঘণ্টার গভীর কাজ — ৮ ঘণ্টার এলোমেলো কাজের চেয়ে অনেক বেশি ফল দেয়।</span></div>
+      </div>
+
+      <div class="pager">
+        <a class="btn btn-ghost" href="#sleep-breaks">← আগের অভ্যাস</a>
+        <a class="btn btn-primary" href="#home">🏁 সব অভ্যাস শেষ — হোমে ফিরুন</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>🎯 ফোকাস মাস্টার — এক সময়ে একটাই কাজ। ধীরে চলুন, কিন্তু থামবেন না।</p>
+    <p class="muted small">সব অগ্রগতি আপনার ব্রাউজারেই সংরক্ষিত থাকে (localStorage)।</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
